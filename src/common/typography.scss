@@ -1,0 +1,20 @@
+$color-text: $color-black;
+$color-link: $color-blue;
+
+$color-content-link: $color-link;
+$color-content-table-bd: #cccaca;
+$color-content-table-bg: #e6e4e4;
+
+body {
+	//color: $color-text;
+	//font: 14px/1.4 $g-font-main;
+	//letter-spacing: 0.85px;
+}
+
+a {
+	color: $color-link;
+
+	&:hover {
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,23 @@
+
+extends ../../layouts/layout-index/layout-index
+
+block title
+	title Главная страница
+
+block content
+	-
+		var pages = [
+
+		{
+			title: 'Home',
+			href: 'page-home.html'
+		}
+		];
+
+	ol.list-pages
+		each page in pages
+			li.list-pages__item
+				a.link(href=page.href, target='_blanck')= page.title
+
+	.iframe
+		iframe#iframe

@@ -1,0 +1,38 @@
+extends ../../layouts/layout-main/layout-main
+
+block content
+    header
+        div.row
+            h1.app-name.left Trello
+
+    section#lists-container.lists-container(ng-controller="listsCtrl as listsCtrl")
+        div.row
+            section.list.list-inline(ng-repeat="list in listsCtrl.lists"
+                ng-controller="listCtrl as listCtrl")
+                h1 {{list.listName}}
+
+                div.card(ng-controller="cardCtrl as cardCtrl"
+                    ng-repeat="card in listCtrl.getCards(list)")
+                    div(ng-if="!cardCtrl.isEditing")
+                        | {{card.description}}
+                        div.edit-small.edit-card.hand(ng-click="cardCtrl.editCard(card)")
+                        div.remove-small.remove-card.hand(ng-click="cardCtrl.deleteCard(card)")
+                    div(ng-if="cardCtrl.isEditing")
+                        form(ng-submit="cardCtrl.updateCard()")
+                            input(close-editing
+                                is-editing="cardCtrl.isEditing"
+                                type="text"
+                                ng-model="cardCtrl.editingCard.description")
+                            select.select-list(ng-model="cardCtrl.editingCard.list_id"
+                                ng-change="cardCtrl.updateCard()"
+                                ng-options="list.id as list.listName for list in listsCtrl.lists")
+                a.hand(ng-click="listCtrl.removeList(list)" )
+                    div.remove.remove-list
+                section.new-card
+                    form(ng-submit="listCtrl.createCard(list)")
+                        input.card-input(type="text"
+                            ng-model="listCtrl.cardDescription"
+                            placeholder="Add card")
+            section.list.new-list.list-inline
+                form(ng-submit="listsCtrl.addList()")
+                    input(type="text" ng-model="listsCtrl.listName")

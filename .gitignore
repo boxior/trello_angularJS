@@ -1,0 +1,9 @@
+.idea/
+.sass-cache/
+node_modules/
+dist/
+dist/scssMaps/
+materials/
+
+frontEndConfig.sublime-project
+frontEndConfig.sublime-workspace

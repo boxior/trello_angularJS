@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'Conv_HouschkaPro-Medium';
+	src: url('../fonts/HouschkaPro-Medium.eot');
+	src: local('☺'), url('../fonts/HouschkaPro-Medium.woff') format('woff'), url('../fonts/HouschkaPro-Medium.ttf') format('truetype'), url('../fonts/HouschkaPro-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HouschkaPro-DemiBold';
+	src: url('../fonts/HouschkaPro-DemiBold.eot');
+	src: local('☺'), url('../fonts/HouschkaPro-DemiBold.woff') format('woff'), url('../fonts/HouschkaPro-DemiBold.ttf') format('truetype'), url('../fonts/HouschkaPro-DemiBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HouschkaPro-Bold';
+	src: url('../fonts/HouschkaPro-Bold.eot');
+	src: local('☺'), url('../fonts/HouschkaPro-Bold.woff') format('woff'), url('../fonts/HouschkaPro-Bold.ttf') format('truetype'), url('../fonts/HouschkaPro-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_HouschkaPro-ExtraBold';
+	src: url('../fonts/HouschkaPro-ExtraBold.eot');
+	src: local('☺'), url('../fonts/HouschkaPro-ExtraBold.woff') format('woff'), url('../fonts/HouschkaPro-ExtraBold.ttf') format('truetype'), url('../fonts/HouschkaPro-ExtraBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-medium: 'Conv_HouschkaPro-Medium';
+$font-demibold: 'Conv_HouschkaPro-DemiBold';
+$font-bold: 'Conv_HouschkaPro-Bold';
+$font-extrabold: 'Conv_HouschkaPro-ExtraBold';
