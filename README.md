@@ -1,3 +1,3 @@
 //link at project
 
-trello_angularJS
+https://boxior.github.io/trello_angularJS/dist/
